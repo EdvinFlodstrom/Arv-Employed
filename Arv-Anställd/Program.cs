@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Arv_Anställd
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Test test = new Test();
+            test.Run();
+
+            Console.ReadLine();
+        }
+    }
+}
