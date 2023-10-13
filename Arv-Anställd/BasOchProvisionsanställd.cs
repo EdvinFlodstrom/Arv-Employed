@@ -10,9 +10,17 @@ namespace Arv_Anställd
     {
         private double fastLön;
         public BasOchProvisionsanställd(string _namn, double
-            _provision, double _försäjlning, double _lön)
+            _provision, double _försäljning, double _fastLön) : base(_namn, _provision, _försäljning)
         {
-            this.fastLön = _lön;
+            this.fastLön = _fastLön;
+        }
+        public override double BeräknaLön()
+        {
+            return (fastLön + (base.BeräknaLön()));
+        }
+        public override string ToString()
+        {
+            return base.ToString().Insert(base.ToString().IndexOf("Lön: "), Convert.ToString("Fast lön: " + fastLön + Environment.NewLine));
         }
     }
 }

@@ -10,10 +10,19 @@ namespace Arv_Anställd
     {
         private double timlön;
         private double arbetadeTimmar;
-        public Timanställd(string _name, double _timlön, double _timmar)
+        public Timanställd(string _namn, double _timlön, double _timmar) : base(_namn)
         {
             this.timlön = _timlön;
             this.arbetadeTimmar = _timmar;
+        }
+        public override double BeräknaLön()
+        {
+            return (timlön * arbetadeTimmar);
+        }
+        public override string ToString()
+        {
+            return base.ToString() + "Timlön: " + timlön + Environment.NewLine + "Arbetade timmar: " 
+                + arbetadeTimmar + Environment.NewLine + "Lön: " + BeräknaLön();
         }
     }
 }

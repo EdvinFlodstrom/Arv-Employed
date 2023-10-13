@@ -14,13 +14,13 @@ namespace Arv_Anställd
         {
             this.name = _name;
         }
-        public double BeräknaLön()
+        public virtual double BeräknaLön()
         {
             return 0;
         }
         public override string ToString()
         {
-            return "";
+            return name + Environment.NewLine + this.GetType().Name + Environment.NewLine;
         }
     }
-}
+} 
