@@ -81,3 +81,16 @@ Sammanfattningsvis lärde jag mig mer om egenskaper och "exception-handling state
 2023-10-17
 --------------
 ### 4630 Arv Anställd - Del 3
+Efter att ha funderat en stund på hur jag skulle kunna ändra på de anställdas uppgifter, både genom att ta bort dem och 
+enkla ändringar, testade jag att låta PersonalHanterare ärva från UserInterface. Det var inte en bra idé. 
+* https://stackoverflow.com/questions/43693858/how-to-fix-system-stackoverflowexception
+
+Hur som helst fick jag det att fungera efter några timmar, och varje anställd har nu även ett id som ändras endast när den anställde tas bort.
+När man ändrar uppgifter för en anställd tas instansen av klassen bort och ersätts av en annan, men arbetarens id kvarhålls.
+Det fick jag att fungera med hjälp av frivilliga parametrar.
+* https://stackoverflow.com/questions/199761/how-can-you-use-optional-parameters-in-c
+* https://stackoverflow.com/questions/19476730/how-to-delete-object
+* https://stackoverflow.com/questions/22106846/c-sharp-delete-instance-of-class
+* https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.add?view=net-7.0
+
+I slutet sorterade jag metoderna, objektvariablerna och egenskaperna så att projektet ser lite bättre ut. Allt som allt lärde jag mig mycket, tror jag.
