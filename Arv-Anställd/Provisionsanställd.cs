@@ -12,8 +12,15 @@ namespace Arv_Anställd
         private double provision;
         private double försäljning;
 
-        public Provisionsanställd(string _name, double provision, 
-            double _försäljning) : base(_name)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="_name"></param>
+        /// <param name="provision"></param>
+        /// <param name="_försäljning"></param>
+        /// <param name="id">Ange ett värde för id endast när en arbetares uppgifter ändras på. 
+        /// Är id = 0 så får arbetarens id ett default-värde.</param>
+        public Provisionsanställd(string _name, double provision, double _försäljning, int id = 0) : base(_name, id == 0 ? 0 : id)
         {
             this.provision = provision;
             this.försäljning = _försäljning;

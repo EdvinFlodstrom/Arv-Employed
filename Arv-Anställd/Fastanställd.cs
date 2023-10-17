@@ -9,7 +9,14 @@ namespace Arv_Anställd
     internal class Fastanställd : Anställd
     {
         private double månadslön;
-        public Fastanställd(string _namn, double _lön) : base(_namn)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="_namn"></param>
+        /// <param name="_lön"></param>
+        /// <param name="id">Ange ett värde för id endast när en arbetares uppgifter ändras på. 
+        /// Är id = 0 så får arbetarens id ett default-värde.</param>
+        public Fastanställd(string _namn, double _lön, int id = 0) : base(_namn, id == 0 ? 0 : id)
         {
             this.månadslön = _lön;
             BeräknaLön();

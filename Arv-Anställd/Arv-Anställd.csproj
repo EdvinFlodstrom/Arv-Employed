@@ -46,11 +46,13 @@
     <Compile Include="Anställd.cs" />
     <Compile Include="BasOchProvisionsanställd.cs" />
     <Compile Include="Fastanställd.cs" />
+    <Compile Include="PersonalHanterare.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provisionsanställd.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Timanställd.cs" />
+    <Compile Include="UserInterface.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
